@@ -8,7 +8,7 @@ class Farmer extends Drawable {
   budget: number = 1000
   showUI: boolean = true
   currentLocation: any
-  imgUrl = "/img/farmer.png"
+  imgUrl = "/img/frmrthns.png"
   constructor() {
     super()
     this.x = 100
