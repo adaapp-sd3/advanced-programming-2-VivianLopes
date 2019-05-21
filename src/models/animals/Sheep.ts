@@ -64,7 +64,7 @@ class Sheep extends Animal {
     public draw(): any {
 
         this.constrainItem()
-        this.doSomethingOccasionally(() => this.eatstraw())
+        this.doSomethingOccasionally(() => this.eatStraw())
         this.stopForFarmer()
         this.checkHealth()
 

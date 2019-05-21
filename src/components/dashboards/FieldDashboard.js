@@ -48,7 +48,6 @@ class FieldDashboard extends Component {
     }
 
 
-
     render() {
         return (
             <div className="FieldDashboard">
@@ -59,7 +58,7 @@ class FieldDashboard extends Component {
                         {this.props.field.contents[0].name}s
                         {this.props.field.contents[0].name === "Cow" && (
                             <div>
-                                <button onClick={this.milkCows}>Milk them</button>
+                                <button onClick={this.milkCows}>Milk Cows</button>
                                 <button onClick={this.yieldBeef}>Snap Cows</button>
 
                             </div>
@@ -73,7 +72,7 @@ class FieldDashboard extends Component {
                         )}
                         {this.props.field.contents[0].name === "Sheep" && (
                             <div>
-                                <button onClick={this.yieldWool}>Get Wool</button>
+                                <button onClick={this.yieldWool}>Shear Sheep</button>
                                 <button onClick={this.yieldLamb}>Snap Sheep</button>
 
                             </div>

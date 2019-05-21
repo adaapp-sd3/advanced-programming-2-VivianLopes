@@ -14,14 +14,14 @@ class Chicken extends Animal {
         this.farm = farm
     }
 
-    // if chicken is hungry, yield less eggs
+    // if chicken is hungry, yield less Chicken
     yieldEggs() {
         let amountOfEggsToYield = 5 - this.hunger
         this.farm.eggs.total += Math.abs(amountOfEggsToYield)
         this.hunger += 1
     }
 
-    // if chicken is thin, yield less beef
+    // if chicken is thin, yield less chicken
     yieldChicken() {
         this.farm.chicken.total += this.hunger > 0 ? 100 / this.hunger : 120
         this.health = 0
@@ -72,7 +72,5 @@ class Chicken extends Animal {
 }
 
 export default Chicken
-
-
 
 
