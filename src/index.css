@@ -30,23 +30,4 @@ canvas {
   width: calc(100% - 700px);
 }
 
-.FarmerDashboard {
-  height: 17em;
-  columns: 2;
-  background-color: rgba(255, 182, 193, 0.24);
 
-  overflow-y: scroll;
-}
-
-.MarketDashboard {
-  height: 30em;
-  columns: 2;
-  background-color: rgba(173, 216, 230, 0.42);
-  overflow-y: scroll;
-
-}
-
-.FieldDashboard {
-  height: 500px;
-  overflow-y: scroll;
-}

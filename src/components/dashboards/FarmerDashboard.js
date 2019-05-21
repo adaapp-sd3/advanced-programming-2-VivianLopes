@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "../../index.css"
+import "../../App.css"
 
 class FarmerDashboard extends Component {
 
@@ -14,6 +14,10 @@ class FarmerDashboard extends Component {
                     <dt>Current budget</dt>
                     <dd>{this.props.farmer.budget}</dd>
                     {this.props.farmer.myFarm && (<>
+                            <dt>Total solar panel</dt>
+                            <dd>{this.props.farmer.myFarm.solarPanel.total} unit</dd>
+                            <dt>Total green gas</dt>
+                            <dd>{this.props.farmer.myFarm.greenGas.total} unit</dd>
                             <dt>Total cows</dt>
                             <dd>{this.props.farmer.myFarm.cows.total}</dd>
                             <dt>Total straw</dt>

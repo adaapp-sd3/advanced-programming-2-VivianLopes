@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import "../../index.css"
+import "../../App.css"
 
 class MarketDashboard extends Component {
 
@@ -32,8 +32,23 @@ class MarketDashboard extends Component {
                 let pricePerAmount = sheepAmount * this.props.market.sheepPrice
                 this.props.market.currentFarmer.budget -= pricePerAmount
             }
+        } else if (item === "solarPanel") {
+            if (this.props.market.currentFarmer.budget > this.props.market.solarPanelPrice) {
+                const solarPanelAmount = 1
+                this.props.market.currentFarmer.myFarm.solarPanel.total += solarPanelAmount
+                let pricePerAmount = solarPanelAmount * this.props.market.solarPanelPrice
+                this.props.market.currentFarmer.budget -= pricePerAmount
+            }
+        } else if (item === "greenGas") {
+            if (this.props.market.currentFarmer.budget > this.props.market.greenGasPrice) {
+                const greenGasAmount = 1
+                this.props.market.currentFarmer.myFarm.greenGas.total += greenGasAmount
+                let pricePerAmount = greenGasAmount * this.props.market.greenGasPrice
+                this.props.market.currentFarmer.budget -= pricePerAmount
+            }
         }
     }
+
 
     sellItem = item => {
         if (item === "milk") {
@@ -107,16 +122,24 @@ class MarketDashboard extends Component {
                             Buy 5 chickens for {this.props.market.liveChickenPrice} per chicken
                         </button>
                     </dd>
-                    <dd>Sheep</dd>
+                    <dt>Sheep</dt>
                     <dd>
                         <button onClick={() => this.buyItem("sheep")}>
                             Buy 5 sheep for {this.props.market.sheepPrice} per sheep
                         </button>
                     </dd>
                     <dt>Solar panels</dt>
-                    <dd>{this.props.market.solarPanelPrice} per unit</dd>
+                    <dd>
+                        <button onClick={() => this.buyItem("solar panel")}>
+                            Buy 1 solar panel for {this.props.market.solarPanelPrice} per unit
+                        </button>
+                    </dd>
                     <dt>Green gas</dt>
-                    <dd>{this.props.market.greenGasPrice} per unit</dd>
+                    <dd>
+                        <button onClick={() => this.buyItem("green gas")}>
+                            Buy 1 green gas generator for {this.props.market.sheepPrice} per unit
+                        </button>
+                    </dd>
                 </dl>
                 <h3>Sell</h3>
                 <dl>
