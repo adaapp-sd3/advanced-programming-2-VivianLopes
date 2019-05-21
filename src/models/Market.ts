@@ -11,6 +11,10 @@ class Market extends Drawable {
 
   milkPrice: number = 1
   beefPrice: number = 25
+  eggPrice: number = 1
+  chickenPrice: number = 25
+  woolPrice: number = 1
+  lambPrice: number = 30
   greenGasPrice: number = 10
   
 
@@ -41,3 +45,15 @@ class Market extends Drawable {
 }
 
 export default Market
+
+
+//
+//     animalChickenPrice: number = 15
+//     animalSheepPrice:number = 35
+//     animalCowPrice:number = 55
+//
+//     foodCornPrice:number = 10
+//     foodStrawPrice:number = 10
+//
+
+
