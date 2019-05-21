@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import "../../index.css"
 
 class FarmerDashboard extends Component {
 
@@ -15,13 +16,6 @@ class FarmerDashboard extends Component {
                     {this.props.farmer.myFarm && (<>
                             <dt>Total cows</dt>
                             <dd>{this.props.farmer.myFarm.cows.total}</dd>
-                            <dt>Total sheep</dt>
-                            <dd>{this.props.farmer.myFarm.sheep.total}</dd>
-                            <dt>Total Chickens</dt>
-                            <dd>{this.props.farmer.myFarm.chickens.total}</dd>
-                        </>
-                    )}
-                    {this.props.farmer.myFarm && (<>
                             <dt>Total straw</dt>
                             <dd>{this.props.farmer.myFarm.straw.total} bails</dd>
                             <dt>Total milk</dt>
@@ -31,6 +25,9 @@ class FarmerDashboard extends Component {
                             <dt>Total beef</dt>
                             <dd>{this.props.farmer.myFarm.beef.total} steaks</dd>
 
+
+                            <dt>Total Chickens</dt>
+                            <dd>{this.props.farmer.myFarm.chickens.total}</dd>
                             <dt>Total corn</dt>
                             <dd>{this.props.farmer.myFarm.corn.total} cobs</dd>
                             <dt>Total eggs</dt>
@@ -38,6 +35,8 @@ class FarmerDashboard extends Component {
                             <dt>Total chicken</dt>
                             <dd>{this.props.farmer.myFarm.chicken.total} fillets</dd>
 
+                            <dt>Total sheep</dt>
+                            <dd>{this.props.farmer.myFarm.sheep.total}</dd>
                             <dt>Total wool</dt>
                             <dd>{this.props.farmer.myFarm.wool.total} bundles</dd>
                             <dt>Total lamb</dt>

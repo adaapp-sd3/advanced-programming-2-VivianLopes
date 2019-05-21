@@ -6,6 +6,10 @@
   font-size: 1.4rem;
 }
 
+.App h3 {
+  font-size: .8rem;
+}
+
 .App-logo {
   height: 2rem;
   pointer-events: none;

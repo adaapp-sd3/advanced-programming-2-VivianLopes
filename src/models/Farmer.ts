@@ -99,3 +99,4 @@ class Farmer extends Drawable {
 }
 
 export default Farmer
+
