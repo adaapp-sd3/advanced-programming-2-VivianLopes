@@ -1,39 +1,37 @@
 import Animal from "../abstract/Animal"
 import Farm from "../Farm";
 
-class Cow extends Animal {
-    name: string = "Cow"
-    genus: string = "Cows"
-    imgUrl: string = "/img/twtr/1f404.png"
-    eats: string = "straw"
+class Chicken extends Animal {
+    name: string = "Chicken"
+    genus: string = "Chicken"
+    imgUrl: string = "/img/twtr/1f413.png"
+    eats: string = "corn"
     hunger: number = 0
     farm: Farm
-
-
 
     constructor(farm: Farm) {
         super()
         this.farm = farm
     }
 
-    // if cow is hungry, yield less milk
-    yieldMilk() {
-        let amountOfMilkToYield = 5 - this.hunger
-        this.farm.milk.total += Math.abs(amountOfMilkToYield)
+    // if chicken is hungry, yield less Chicken
+    yieldEggs() {
+        let amountOfEggsToYield = 5 - this.hunger
+        this.farm.eggs.total += Math.abs(amountOfEggsToYield)
         this.hunger += 1
     }
 
-    // if cow is thin, yield less beef
-    yieldBeef() {
-        this.farm.beef.total += this.hunger > 0 ? 100 / this.hunger : 120
+    // if chicken is thin, yield less chicken
+    yieldChicken() {
+        this.farm.chicken.total += this.hunger > 0 ? 100 / this.hunger : 120
         this.health = 0
     }
 
 
-    eatStraw() {
+    eatCorn() {
         if (this.hunger <= 5 && this.hunger !== 0) {
-            if (this.farm.straw.total > 0) {
-                this.farm.straw.total--
+            if (this.farm.corn.total > 0) {
+                this.farm.corn.total--
                 this.hunger = this.hunger - 1
             } else {
                 if (this.hunger < 5) {
@@ -49,8 +47,8 @@ class Cow extends Animal {
             this.health -= 1
         }
         if (this.health <= 0) {
-            this.farm.cows.objects.pop()
-            this.farm.cows.total -= 1
+            this.farm.chickens.objects.pop()
+            this.farm.chickens.total -= 1
         }
     }
 
@@ -60,19 +58,19 @@ class Cow extends Animal {
     }
 
     makeSound() {
-        return "Moooo"
+        return "Cluck"
     }
 
     public draw(): any {
 
         this.constrainItem()
-        this.doSomethingOccasionally(() => this.eatStraw())
+        this.doSomethingOccasionally(() => this.eatCorn())
         this.stopForFarmer()
         this.checkHealth()
 
     }
 }
 
-export default Cow
+export default Chicken
 
 

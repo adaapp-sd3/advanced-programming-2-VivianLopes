@@ -38,9 +38,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h2>
-            <img src="/img/farmer.png" className="App-logo" alt="logo" />{" "}
-            Dashboard
+            <img src="/img/frmrthns.png" className="App-logo" alt="logo" />{" "}
+            Farmer Thanos' Farmer Dashboard
           </h2>
+          <h3>
+            Because Why Slaughter One Animal At A Time When You Can do Half Of Them At Once
+          </h3>
         </header>
         <FarmManager farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
       </div>

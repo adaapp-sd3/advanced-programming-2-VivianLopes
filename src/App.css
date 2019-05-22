@@ -6,6 +6,10 @@
   font-size: 1.4rem;
 }
 
+.App h3 {
+  font-size: .8rem;
+}
+
 .App-logo {
   height: 2rem;
   pointer-events: none;
@@ -26,3 +30,23 @@
 .App-link {
   color: #61dafb;
 }
+
+.FarmManager {
+  display: inline-flex;
+  width:100%;
+}
+
+.FarmerDashboard {
+  min-width:30%;
+  width: 2vmin;
+  background-color: rgba(238, 164, 76, 0.42);
+}
+
+.MarketDashboard{
+  width: 100%;
+}
+
+.FieldDashboard{
+  width: 100%;
+}
+

@@ -1,3 +1,18 @@
+## Farmer Thanos Simulator
+
+### Why farmer thanos? 
+Because who can be asked to slaughter one animal at a time so it's set to slaughter half at each time
+
+##TimeSheet
+Hours 1-3: Setting up animals - I had issues with the chickens where they would all die when eggs were collected 
+Hours 4-5: Buying in the market
+Hours 6-7: Selling in the market - I had issues where selling the items wouldn't decrease the amount of what was being sold.
+Hours 8-9: Improving dashboard layouts
+
+
+
+
+##Running
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
