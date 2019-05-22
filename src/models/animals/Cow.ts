@@ -9,6 +9,8 @@ class Cow extends Animal {
     hunger: number = 0
     farm: Farm
 
+
+
     constructor(farm: Farm) {
         super()
         this.farm = farm
